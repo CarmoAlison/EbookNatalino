@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwitcher+Grypen:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.site-header {
+    background-color: #001FCC; /* Azul da paleta */
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+  }
+  
+  /* Contêiner principal */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FFFFFF; /* Branco para destaque */
+    text-decoration: none;
+  }
+  
+  /* Menu de navegação */
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Maior espaçamento entre os itens */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu a {
+    color: #FFFFFF; /* Branco para contraste */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500; /* Peso médio para profissionalismo */
+  }
+  
+  .menu a:hover {
+    color: #D3AC00; /* Dourado para hover */
+  }
+  
+  /* Botão de compra */
+  .btn-comprar {
+    background-color: #D3AC00; /* Dourado da paleta */
+    color: #ffffff; /* Azul da paleta */
+    padding: 10px 25px;
+    border-radius: 25px; /* Borda arredondada para um visual moderno */
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 5px #3d3d3d;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-comprar:hover {
+    background-color: #FFFFFF; /* Branco para hover */
+    color: #001FCC; /* Azul da paleta */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .menu ul {
+      flex-direction: column;
+      display: none; /* Esconde o menu em telas pequenas */
+    }
+    .menu.active ul {
+      display: flex;
+    }
+    .btn-comprar {
+      padding: 8px 20px; /* Ajuste do botão em telas menores */
+    }
+  }
+  /* Seção em tela cheia */
+.full-screen-section {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Ocupa a altura total da tela */
+    background: url('Imagens/natalina.png') no-repeat center center/cover; /* Foto de fundo */
+    background-size: cover;
+  }
+  
+  /* Sobreposição para destacar o conteúdo */
+  .full-screen-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro translúcido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF; /* Texto branco */
+    padding: 20px;
+  }
+  
+  /* Título */
+  .full-screen-section h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  /* Parágrafo */
+  .full-screen-section p {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+  }
+  
+  /* Botão */
+  .full-screen-section .btn-comprar {
+    background-color: #D3AC00; /* Dourado */
+    color: #001FCC; /* Azul */
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .full-screen-section .btn-comprar:hover {
+    background-color: #FFFFFF; /* Branco */
+    color: #001FCC; /* Azul */
+  }
+  
+
+  /* Seção de Depoimentos */
+.depoimentos-section {
+    background-color: #001FCC; /* Azul da paleta */
+    color: #FFFFFF; /* Texto branco */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .depoimentos-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #D3AC00; /* Dourado */
+  }
+  
+  /* Grade de depoimentos */
+  .depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .depoimento {
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #001FCC; /* Texto azul */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .depoimento:hover {
+    transform: translateY(-5px);
+  }
+  
+  .depoimento p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .depoimento span {
+    font-size: 0.9em;
+    color: #000000; /* Preto */
+  }
+
+  .container1{
+    
+
+    h2{
+        color: #ffffff;
+        filter: drop-shadow(2px 2px 2px #333);
+    }
+  }
+  /* Estilo da seção de Benefícios */
+/* Estilo da seção de Benefícios */
+.beneficios-section {
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #000000; /* Texto preto */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .beneficios-section h2 {
+    font-size: 2.5em;
+    color: #001FCC; /* Título em azul */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .beneficios-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px; /* Centralizado e com largura fixa em telas maiores */
+  }
+  
+  .beneficios-section ul li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: left;
+    gap: 10px;
+    line-height: 1.5;
+  }
+  
+  /* Ícone do check */
+  .beneficios-section ul li::before {
+    content: "✔"; /* Adiciona o check */
+    font-size: 1.5em;
+    color: #D3AC00; /* Ícone dourado */
+    margin-right: 10px;
+  }
+/* Estilo da seção FAQ */
+.faq-section {
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #000000; /* Texto preto */
+    padding: 50px 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .faq-section h2 {
+    font-size: 2.5em;
+    color: #001FCC; /* Título em azul */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #e1e1e1; /* Linha separadora */
+  }
+  
+  .faq-item h3 {
+    font-size: 1.5em;
+    color: #001FCC; /* Cor azul para perguntas */
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .faq-item p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333333; /* Texto da resposta em cinza escuro */
+  }
+  
+  /* Estilo para o FAQ expandido (se desejar) */
+  .faq-item.active p {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .faq-item p {
+    display: none; /* Esconde a resposta inicialmente */
+  }
+  
+  /* Animação para transição suave */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilos responsivos para telas pequenas */
+  @media (max-width: 768px) {
+    .faq-section h2 {
+      font-size: 2em;
+    }
+  
+    .faq-item h3 {
+      font-size: 1.3em;
+    }
+  
+    .faq-item p {
+      font-size: 1.1em;
+    }
+  }
+    /* Estilo da seção Contato */
+.contato-section {
+    background-color: #FFFFFF; /* Fundo branco */
+    color: #000000; /* Texto preto */
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .contato-section h2 {
+    font-size: 2.5em;
+    color: #001FCC; /* Título azul */
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .contato-section .form-container {
+    width: 100%;
+    max-width: 800px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza o formulário */
+  }
+  
+  .contato-section .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .contato-section label {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+  
+  .contato-section input,
+  .contato-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s;
+  }
+  
+  .contato-section input:focus,
+  .contato-section textarea:focus {
+    border-color: #D3AC00; /* Bordas douradas ao focar */
+    outline: none;
+  }
+  
+  .contato-section textarea {
+    height: 150px;
+    resize: vertical; /* Permite redimensionamento vertical */
+  }
+  
+  .contato-section .btn-enviar {
+    background-color: #D3AC00; /* Dourado */
+    color: #001FCC; /* Azul */
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.2em;
+    width: 100%; /* Botão ocupa a largura total */
+  }
+  
+  .contato-section .btn-enviar:hover {
+    background-color: #001FCC; /* Azul */
+    color: #FFFFFF; /* Texto branco */
+  }
+  
+  /* Estilos responsivos para telas pequenas */
+  @media (max-width: 768px) {
+    .contato-section h2 {
+      font-size: 2em;
+    }
+  
+    .contato-section .form-group label {
+      font-size: 1em;
+    }
+  
+    .contato-section input,
+    .contato-section textarea {
+      font-size: 1em;
+    }
+  
+    .contato-section .btn-enviar {
+      font-size: 1em;
+      padding: 10px 25px;
+    }
+  }
+  /* Estilo do Footer */
+.footer {
+    background-color: #001FCC; /* Fundo azul */
+    color: #FFFFFF; /* Texto branco */
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid #D3AC00; /* Linha dourada superior */
+  }
+  
+  .footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .footer h3 {
+    font-size: 2.5em;
+    color: #FFFFFF; /* Título branco */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .footer .footer-links a {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .footer-links a:hover {
+    color: #D3AC00; /* Dourado ao passar o mouse */
+  }
+  
+  .footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .footer .social-icons a {
+    font-size: 2em;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #D3AC00; /* Dourado ao passar o mouse */
+  }
+  
+  .footer .footer-bottom {
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #BBBBBB; /* Texto de rodapé em cinza claro */
+  }
+  
+  .footer .footer-bottom a {
+    color: #D3AC00; /* Dourado para links de rodapé */
+    text-decoration: none;
+  }
+  
+  .footer .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos responsivos para telas pequenas */
+  @media (max-width: 768px) {
+    .footer .footer-container {
+      gap: 20px;
+    }
+  
+    .footer h3 {
+      font-size: 1.8em;
+    }
+  
+    .footer .footer-links a {
+      font-size: 1em;
+    }
+  
+    .footer .social-icons a {
+      font-size: 1.5em;
+    }
+  
+    .footer .footer-bottom {
+      font-size: 1em;
+    }
+  }
+  
+
+  /* Estilo para a seção de Depoimentos */
+.depoimentos {
+    background-color: #F9F9F9; /* Fundo claro */
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .depoimentos h2 {
+    font-size: 2.5em;
+    color: #001FCC; /* Azul */
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .depoimentos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .depoimento {
+    background-color: #FFFFFF; /* Fundo branco para os depoimentos */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    max-width: 350px; /* Limite de largura */
+  }
+  
+  .depoimento-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .depoimento-text {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+  
+  .depoente-nome {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #001FCC; /* Azul para o nome */
+    margin-bottom: 5px;
+  }
+  
+  .depoente-profissao {
+    font-size: 1em;
+    color: #777; /* Cor cinza para a profissão */
+  }
+  
+  .depoimentos-container .depoimento:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Efeito de hover */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .depoimentos h2 {
+      font-size: 2em;
+    }
+  
+    .depoimento {
+      padding: 15px;
+      max-width: 300px;
+    }
+  
+    .depoimento-img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .depoimento-text {
+      font-size: 1em;
+    }
+  }
+/* Container principal que envolve as duas seções */
+.faq-contato-section {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que as seções se empilhem quando necessário */
+  }
+  
+  /* Estilo da seção FAQ */
+  .faq-section {
+    flex: 1 1 48%; /* Cada seção ocupa 48% do espaço disponível */
+    background-color: #e3e3e3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  
+  .faq-item h3 {
+    font-size: 1.4rem;
+    color: #333;
+  }
+  
+  .faq-item p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Estilo da seção de Contato */
+  .contato-section {
+    flex: 1 1 48%; /* Cada seção ocupa 48% do espaço disponível */
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contato-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsividade: quando a tela for menor que 768px, as seções se empilham */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Empilha as seções verticalmente */
+    }
+  
+    .faq-section, .contato-section {
+      flex: 1 1 100%; /* Cada seção ocupa 100% da largura */
+    }
+  }
+    
